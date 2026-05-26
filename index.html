@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrie Blackery — Medium & Healer</title>
+<meta name="description" content="Carrie Blackery is a gifted Medium and Healer based in Essex. Connecting you with loved ones in Spirit through 1-2-1 readings, psychic parties, private events and workshops.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --cream: #F5F0EA;
+  --warm-white: #FAF7F3;
+  --text: #3B3130;
+  --text-light: #6D5D55;
+  --accent: #A07E5E;
+  --accent-light: #C8B49E;
+  --accent-dark: #7A5E44;
+  --gold: #B8925A;
+  --gold-light: #DCCBA8;
+  --sage: #8A9A7E;
+  --sage-light: #C2CCBA;
+  --terracotta: #B87356;
+  --terracotta-light: #D9A890;
+  --divider: #DED5CB;
+  --shadow: rgba(59, 49, 48, 0.08);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  color: var(--text);
+  background: var(--cream);
+  line-height: 1.7;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+/* --- NAV --- */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(250, 248, 245, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--divider);
+  transition: all 0.3s ease;
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.nav-logo span { color: var(--accent); }
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover { color: var(--text); }
+.nav-links a:hover::after { width: 100%; }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 1.5px;
+  background: var(--text);
+  transition: all 0.3s;
+}
+
+/* --- HERO --- */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8rem 2rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(ellipse at 30% 20%, rgba(138, 154, 126, 0.08) 0%, transparent 50%),
+              radial-gradient(ellipse at 70% 80%, rgba(184, 115, 86, 0.06) 0%, transparent 50%),
+              radial-gradient(ellipse at 50% 50%, rgba(184, 146, 90, 0.04) 0%, transparent 60%);
+  animation: gentleFloat 20s ease-in-out infinite;
+}
+
+@keyframes gentleFloat {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-2%, 1%) rotate(1deg); }
+}
+
+.hero-content {
+  position: relative;
+  max-width: 720px;
+}
+
+.hero-ornament {
+  width: 60px;
+  height: 1px;
+  background: var(--accent);
+  margin: 0 auto 2rem;
+  position: relative;
+}
+
+.hero-ornament::before {
+  content: '✦';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--accent);
+  font-size: 0.7rem;
+  background: var(--cream);
+  padding: 0 0.8rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--accent-dark);
+}
+
+.hero-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--text-light);
+  margin-top: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+.hero-tagline {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  margin-top: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-cta {
+  margin-top: 3rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2.4rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 0;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--text);
+  color: var(--cream);
+}
+
+.btn-primary:hover {
+  background: var(--accent-dark);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--divider);
+}
+
+.btn-outline:hover {
+  border-color: var(--accent);
+  color: var(--accent-dark);
+}
+
+/* --- SECTIONS --- */
+section {
+  padding: 6rem 2rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 1.5rem;
+}
+
+.section-intro {
+  color: var(--text-light);
+  max-width: 600px;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* --- ABOUT --- */
+.about { background: var(--warm-white); }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.about-image {
+  aspect-ratio: 4/5;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.mojo-photo {
+  margin-top: 2rem;
+  overflow: hidden;
+}
+
+.mojo-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-text p {
+  margin-bottom: 1.2rem;
+  color: var(--text-light);
+  line-height: 1.85;
+}
+
+.about-text p:first-of-type::first-letter {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  float: left;
+  line-height: 0.8;
+  margin-right: 0.5rem;
+  margin-top: 0.15rem;
+  color: var(--terracotta);
+}
+
+.mojo-note {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--cream);
+  border-left: 2px solid var(--sage-light);
+  font-style: italic;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+/* --- SERVICES --- */
+.services { background: var(--cream); }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.service-card {
+  background: var(--warm-white);
+  padding: 2.5rem 2rem;
+  transition: all 0.4s ease;
+  position: relative;
+  border: 1px solid transparent;
+}
+
+.service-card:hover {
+  border-color: var(--divider);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px var(--shadow);
+}
+
+.service-icon {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: block;
+  color: var(--terracotta);
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 400;
+}
+
+.service-card p {
+  color: var(--text-light);
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
+/* --- TESTIMONIALS --- */
+.testimonials {
+  background: var(--text);
+  color: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials::before {
+  content: '"';
+  position: absolute;
+  top: -2rem;
+  right: 5%;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20rem;
+  color: rgba(255,255,255,0.03);
+  line-height: 1;
+}
+
+.testimonials .section-label { color: var(--gold); }
+.testimonials .section-title { color: var(--cream); }
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.testimonial {
+  padding: 2rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  position: relative;
+}
+
+.testimonial p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.8;
+  color: rgba(250, 248, 245, 0.85);
+}
+
+.testimonial-author {
+  margin-top: 1.2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sage-light);
+}
+
+/* --- EVENTS --- */
+.events { background: var(--warm-white); }
+
+.event-banner {
+  margin-top: 3rem;
+  padding: 3rem;
+  background: linear-gradient(135deg, var(--cream) 0%, rgba(194, 204, 186, 0.2) 50%, rgba(220, 203, 168, 0.15) 100%);
+  border: 1px solid var(--divider);
+  text-align: center;
+}
+
+.event-banner h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.event-banner p {
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+/* --- CONTACT --- */
+.contact { background: var(--cream); }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.contact-info h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.contact-detail-icon {
+  font-size: 1rem;
+  margin-top: 0.2rem;
+  color: var(--sage);
+}
+
+.contact-detail-text {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.contact-detail-text a {
+  color: var(--text-light);
+  text-decoration: none;
+  border-bottom: 1px solid var(--divider);
+  transition: border-color 0.3s;
+}
+
+.contact-detail-text a:hover {
+  border-color: var(--accent);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+
+.form-group label {
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--divider);
+  background: var(--warm-white);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--text);
+  transition: border-color 0.3s;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.form-group textarea { resize: vertical; min-height: 120px; }
+
+/* --- FOOTER --- */
+footer {
+  background: var(--text);
+  color: rgba(250, 248, 245, 0.5);
+  text-align: center;
+  padding: 3rem 2rem;
+  font-size: 0.85rem;
+}
+
+footer a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  list-style: none;
+}
+
+.footer-links a {
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(250, 248, 245, 0.4);
+  transition: color 0.3s;
+}
+
+.footer-links a:hover { color: var(--gold); }
+
+/* --- ANIMATIONS --- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- MOBILE --- */
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(250, 248, 245, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+    border-bottom: 1px solid var(--divider);
+  }
+
+  .nav-links.open { display: flex; }
+
+  .hero { min-height: 90vh; padding: 7rem 1.5rem 3rem; }
+  .hero h1 { font-size: 2.4rem; }
+
+  section { padding: 4rem 1.5rem; }
+
+  .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .about-image { aspect-ratio: 16/9; }
+
+  .services-grid { grid-template-columns: 1fr; }
+
+  .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+
+  .testimonial-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 2rem; }
+  .nav-inner { padding: 0.8rem 1.2rem; }
+  section { padding: 3rem 1.2rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Carrie <span>Blackery</span></a>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#about" onclick="document.querySelector('.nav-links').classList.remove('open')">About</a></li>
+      <li><a href="#services" onclick="document.querySelector('.nav-links').classList.remove('open')">Services</a></li>
+      <li><a href="#testimonials" onclick="document.querySelector('.nav-links').classList.remove('open')">Testimonials</a></li>
+      <li><a href="#events" onclick="document.querySelector('.nav-links').classList.remove('open')">Events</a></li>
+      <li><a href="#contact" onclick="document.querySelector('.nav-links').classList.remove('open')">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content fade-in">
+    <div class="hero-ornament"></div>
+    <h1>Carrie Blackery</h1>
+    <h1 style="font-size: clamp(1.4rem, 3vw, 2rem); font-style: italic; color: var(--accent-dark); margin-top: 0.3rem;">Medium &amp; Healer</h1>
+    <p class="hero-subtitle">"Bridging two worlds with love, integrity and grace"</p>
+    <p class="hero-tagline">Connecting you with your loved ones in Spirit — bringing messages of love, hope and upliftment to help you on your journey.</p>
+    <div class="hero-cta">
+      <a href="#services" class="btn btn-primary">Explore Services</a>
+      <a href="#contact" class="btn btn-outline">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image fade-in">
+        <img src="carrie.jpg" alt="Carrie Blackery — Medium and Healer">
+      </div>
+      <div class="about-text fade-in">
+        <span class="section-label">My Journey</span>
+        <h2 class="section-title">A Connection That Began<br>With a Dream</h2>
+        <p>My connection to Spirit began over 35 years ago with a vivid dream of my Grandad, exactly one year after his passing. That single moment blossomed into a profound and humbling journey that has shaped my entire life.</p>
+        <p>I remain deeply grateful to Spirit for the opportunity to serve as a bridge between worlds. With integrity, love and deep respect, I connect with your loved ones — allowing you to experience their enduring love and support whilst offering compelling evidence of life beyond life.</p>
+        <p>I regularly serve Spiritual Churches and Centres across Essex, Kent, Suffolk and London, and I feel truly honoured every time I step onto the platform.</p>
+        <div class="mojo-note">
+          🐾 In loving memory of Mojo, my beloved Westie, who joined me at churches and centres for many years. He was welcomed everywhere with open arms and brought so much joy to so many people. Forever by my side in spirit.
+        </div>
+        <div class="mojo-photo">
+          <img src="carrie-and-mojo.jpg" alt="Carrie with her beloved Westie, Mojo">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <span class="section-label fade-in">What I Offer</span>
+    <h2 class="section-title fade-in">Services</h2>
+    <p class="section-intro fade-in">Whether you're seeking a private connection with a loved one or a shared experience with friends, I offer a range of ways to connect with Spirit.</p>
+
+    <div class="services-grid">
+      <div class="service-card fade-in">
+        <span class="service-icon">✦</span>
+        <h3>1-2-1 Readings</h3>
+        <p>A personal, private sitting either at your home or mine. This is a gentle, intimate experience where I connect with your loved ones in Spirit, bringing through messages of love, evidence and guidance. Each reading is unique to you.</p>
+      </div>
+
+      <div class="service-card fade-in">
+        <span class="service-icon">✦</span>
+        <h3>Psychic Parties</h3>
+        <p>Gather your friends and family for an unforgettable evening. I come to your home and provide individual card readings for each guest, with Spirit connections woven throughout. A wonderful way to share the experience together.</p>
+      </div>
+
+      <div class="service-card fade-in">
+        <span class="service-icon">✦</span>
+        <h3>Private Platform Events</h3>
+        <p>An intimate evening of mediumship for a small group, held in the comfort of your home or a venue of your choice. I work from the platform, delivering messages from Spirit to your guests — an uplifting and deeply moving experience.</p>
+      </div>
+
+      <div class="service-card fade-in">
+        <span class="service-icon">✦</span>
+        <h3>Email Readings</h3>
+        <p>Can't meet in person? Send me your question and I'll connect with Spirit on your behalf, providing a detailed written reading delivered straight to your inbox. A convenient way to receive guidance wherever you are.</p>
+      </div>
+
+      <div class="service-card fade-in">
+        <span class="service-icon">✦</span>
+        <h3>Workshops</h3>
+        <p>Explore and develop your own spiritual gifts through a range of workshops. From meditation and healing to developing your mediumship, these sessions offer a supportive and nurturing space to grow on your spiritual journey.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <span class="section-label fade-in">Kind Words</span>
+    <h2 class="section-title fade-in">What People Say</h2>
+
+    <div class="testimonial-grid">
+      <div class="testimonial fade-in">
+        <p>The lovely Carrie came last night to an evening with me and 5 friends. What an awesome night — card readings and the spirits came as they were comfortable. She made us all feel at ease. We laughed and cried and the goose pimple moments are still there today.</p>
+        <div class="testimonial-author">— Happy Client</div>
+      </div>
+      <div class="testimonial fade-in">
+        <p>Had a brilliant reading with Carrie. She was spot on with everything. She's an amazing person and a medium I would definitely recommend.</p>
+        <div class="testimonial-author">— Happy Client</div>
+      </div>
+      <div class="testimonial fade-in">
+        <p>Carrie is a very special lady and truly gifted! I have had 2 gatherings at my house now, and would really like to say thank you so much for passing on messages from our loved ones.</p>
+        <div class="testimonial-author">— Happy Client</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section class="events" id="events">
+  <div class="container">
+    <span class="section-label fade-in">Upcoming</span>
+    <h2 class="section-title fade-in">Events &amp; Demonstrations</h2>
+    <p class="section-intro fade-in">I regularly demonstrate mediumship at Spiritual Churches and Centres across Essex, Kent, Suffolk and London. Keep an eye here for upcoming public events.</p>
+
+    <div class="event-banner fade-in">
+      <h3>An Intimate Evening of Mediumship</h3>
+      <p>New dates coming soon — watch this space!</p>
+      <a href="#contact" class="btn btn-primary">Register Your Interest</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <span class="section-label fade-in">Get in Touch</span>
+    <h2 class="section-title fade-in">Book a Reading</h2>
+
+    <div class="contact-grid">
+      <div class="contact-info fade-in">
+        <h3>I'd love to hear from you</h3>
+        <p>Whether you'd like to book a private reading, arrange a psychic party, enquire about an event or simply ask a question — please don't hesitate to get in touch.</p>
+
+        <div class="contact-detail">
+          <span class="contact-detail-icon">✉</span>
+          <div class="contact-detail-text">
+            <a href="mailto:C@rrie.co.uk">C@rrie.co.uk</a>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <span class="contact-detail-icon">✆</span>
+          <div class="contact-detail-text">
+            <a href="tel:+447710443223">07710 443223</a>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <span class="contact-detail-icon">⚲</span>
+          <div class="contact-detail-text">
+            South Benfleet, Essex
+          </div>
+        </div>
+
+        <div style="margin-top: 2rem;">
+          <a href="https://www.facebook.com/carrieblackerymedium/" target="_blank" rel="noopener" class="btn btn-outline" style="font-size: 0.78rem; padding: 0.7rem 1.8rem;">Follow on Facebook</a>
+        </div>
+      </div>
+
+      <form class="contact-form fade-in" action="https://formspree.io/f/mkoepwkb" method="POST">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="service">Interested In</label>
+          <select id="service" name="service">
+            <option value="">Please select...</option>
+            <option value="121">1-2-1 Reading</option>
+            <option value="party">Psychic Party</option>
+            <option value="event">Private Platform Event</option>
+            <option value="email-reading">Email Reading</option>
+            <option value="workshop">Workshop</option>
+            <option value="other">Other / General Enquiry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="align-self: flex-start;">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <ul class="footer-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <p>&copy; 2026 Carrie Blackery — Medium &amp; Healer. All rights reserved.</p>
+</footer>
+
+<script>
+// Scroll fade-in animation
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
